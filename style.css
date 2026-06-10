@@ -198,6 +198,31 @@ body {
   align-items: center;
 }
 
+.with-flags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.mini-team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mini-flag {
+  width: 34px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+.waiting {
+  color: #facc15;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;

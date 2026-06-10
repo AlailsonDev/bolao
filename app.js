@@ -25,9 +25,19 @@ async function loadData() {
 
   data.predictions.forEach(person => {
 
-    const correct =
-      person.score.team1 === data.match.official_score.team1 &&
-      person.score.team2 === data.match.official_score.team2;
+    const official1 = data.match.official_score.team1;
+const official2 = data.match.official_score.team2;
+
+const hasOfficialResult =
+  !isNaN(official1) &&
+  !isNaN(official2) &&
+  official1 !== "" &&
+  official2 !== "";
+
+const correct =
+  hasOfficialResult &&
+  person.score.team1 === official1 &&
+  person.score.team2 === official2;
 
     const card = document.createElement('div');
     card.className = correct ? 'card winner' : 'card';
@@ -65,9 +75,21 @@ async function loadData() {
 
 </div>
 
-        <div class="result-text ${correct ? 'correct' : 'wrong'}">
-          ${correct ? 'Palpite Correto!' : 'Não acertou desta vez'}
-        </div>
+        <div class="result-text ${
+  !hasOfficialResult
+    ? 'waiting'
+    : correct
+      ? 'correct'
+      : 'wrong'
+}">
+  ${
+    !hasOfficialResult
+      ? '⏳ Aguardando Resultado'
+      : correct
+        ? '✅ Palpite Correto!'
+        : '❌ Não acertou desta vez'
+  }
+</div>
       </div>
     `;
 
