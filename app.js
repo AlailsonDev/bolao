@@ -23,6 +23,8 @@ async function loadData() {
 
   const container = document.getElementById('predictions-container');
 
+  const winners = [];
+
   data.predictions.forEach(person => {
 
     const official1 = data.match.official_score.team1;
@@ -35,9 +37,16 @@ const hasOfficialResult =
   official2 !== "";
 
 const correct =
-  hasOfficialResult &&
+
+ hasOfficialResult &&
   person.score.team1 === official1 &&
   person.score.team2 === official2;
+
+    if (correct) {
+  winners.push(person);
+}
+
+ 
 
     const card = document.createElement('div');
     card.className = correct ? 'card winner' : 'card';
@@ -95,6 +104,100 @@ const correct =
 
     container.appendChild(card);
   });
+  showWinnerPopup(winners, team1, team2);
+}
+
+const confettiScript = document.createElement('script');
+
+confettiScript.src =
+  'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js';
+
+document.body.appendChild(confettiScript);
+
+function startConfetti() {
+
+  const duration = 4000;
+  const end = Date.now() + duration;
+
+  (function frame() {
+
+    confetti({
+      particleCount: 4,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 }
+    });
+
+    confetti({
+      particleCount: 4,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 }
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+
+  })();
 }
 
 loadData();
+
+function showWinnerPopup(winners, team1, team2) {
+
+  if (!winners.length) return;
+
+  const popup = document.getElementById('winner-popup');
+  const container = document.getElementById('winner-cards');
+
+  container.innerHTML = '';
+
+  winners.forEach(person => {
+
+    container.innerHTML += `
+      <div class="popup-winner-card">
+
+        <img src="${person.photo}" alt="${person.name}">
+
+        <div class="popup-winner-name">
+          ${person.name}
+        </div>
+
+        <div class="popup-score">
+
+          <img
+            class="mini-flag"
+            src="https://flagcdn.com/w40/${team1.flag}.png"
+          >
+
+          ${person.score.team1}
+
+          <span class="x">x</span>
+
+          ${person.score.team2}
+
+          <img
+            class="mini-flag"
+            src="https://flagcdn.com/w40/${team2.flag}.png"
+          >
+
+        </div>
+
+      </div>
+    `;
+  });
+
+  
+
+  popup.classList.remove('hidden');
+
+  startConfetti();
+
+  document
+    .getElementById('close-popup')
+    .addEventListener('click', () => {
+
+      popup.classList.add('hidden');
+    });
+}
