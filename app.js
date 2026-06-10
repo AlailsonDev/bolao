@@ -40,11 +40,30 @@ async function loadData() {
 
         <div class="name">${person.name}</div>
 
-        <div class="prediction-score">
-          <span>${person.score.team1}</span>
-          <span>x</span>
-          <span>${person.score.team2}</span>
-        </div>
+        <div class="prediction-score with-flags">
+
+  <div class="mini-team">
+    <img 
+      class="mini-flag"
+      src="https://flagcdn.com/w40/${team1.flag}.png"
+      alt="${team1.name}"
+    >
+    <span>${person.score.team1}</span>
+  </div>
+
+  <span class="x">x</span>
+
+  <div class="mini-team">
+    <span>${person.score.team2}</span>
+
+    <img 
+      class="mini-flag"
+      src="https://flagcdn.com/w40/${team2.flag}.png"
+      alt="${team2.name}"
+    >
+  </div>
+
+</div>
 
         <div class="result-text ${correct ? 'correct' : 'wrong'}">
           ${correct ? 'Palpite Correto!' : 'Não acertou desta vez'}
