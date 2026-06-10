@@ -1,4 +1,5 @@
 
+
 async function loadData() {
   const response = await fetch('data.json');
   const data = await response.json();
@@ -114,25 +115,59 @@ confettiScript.src =
 
 document.body.appendChild(confettiScript);
 
+let myConfetti;
+
+confettiScript.onload = () => {
+
+  const confettiCanvas =
+    document.getElementById('confetti-canvas');
+
+  myConfetti =
+    confetti.create(confettiCanvas, {
+      resize: true,
+      useWorker: true
+    });
+
+};
+
 function startConfetti() {
+
+  if (!myConfetti) return;
 
   const duration = 4000;
   const end = Date.now() + duration;
 
   (function frame() {
 
-    confetti({
-      particleCount: 4,
+    myConfetti({
+      particleCount: 6,
       angle: 60,
-      spread: 55,
-      origin: { x: 0 }
+      spread: 70,
+      origin: { x: 0 },
+
+      zIndex: 9998
     });
 
-    confetti({
-      particleCount: 4,
+    myConfetti({
+      particleCount: 6,
       angle: 120,
-      spread: 55,
-      origin: { x: 1 }
+      spread: 70,
+      origin: { x: 1 },
+
+      zIndex: 10001
+    });
+
+    myConfetti({
+      particleCount: 3,
+      spread: 120,
+      startVelocity: 40,
+
+      origin: {
+        x: Math.random(),
+        y: Math.random() - 0.2
+      },
+
+      zIndex: 10002
     });
 
     if (Date.now() < end) {
@@ -195,9 +230,19 @@ function showWinnerPopup(winners, team1, team2) {
   startConfetti();
 
   document
-    .getElementById('close-popup')
-    .addEventListener('click', () => {
+  .getElementById('close-popup')
+  .addEventListener('click', () => {
+
+    popup.classList.add('closing');
+
+    startConfetti();
+
+    setTimeout(() => {
 
       popup.classList.add('hidden');
-    });
+      popup.classList.remove('closing');
+
+    }, 500);
+
+  });
 }
