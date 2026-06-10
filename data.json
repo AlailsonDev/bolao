@@ -9,8 +9,8 @@
       "flag": "ma"
     },
     "official_score": {
-      "team1": "1",
-      "team2": "0"
+      "team1": "-",
+      "team2": "-"
     }
   },
   "predictions": [
@@ -26,16 +26,16 @@
       "name": "Alysson",
       "photo": "img/alysson.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Ana Bia",
       "photo": "img/ana bia.jpeg",
       "score": {
-        "team1": "0",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
