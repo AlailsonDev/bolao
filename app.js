@@ -117,18 +117,23 @@ document.body.appendChild(confettiScript);
 
 let myConfetti;
 
-confettiScript.onload = () => {
+const confettiReady = new Promise((resolve) => {
 
-  const confettiCanvas =
-    document.getElementById('confetti-canvas');
+  confettiScript.onload = () => {
 
-  myConfetti =
-    confetti.create(confettiCanvas, {
-      resize: true,
-      useWorker: true
-    });
+    const confettiCanvas =
+      document.getElementById('confetti-canvas');
 
-};
+    myConfetti =
+      confetti.create(confettiCanvas, {
+        resize: true,
+        useWorker: true
+      });
+
+    resolve();
+  };
+
+});
 
 function startConfetti() {
 
@@ -179,7 +184,7 @@ function startConfetti() {
 
 loadData();
 
-function showWinnerPopup(winners, team1, team2) {
+async function showWinnerPopup(winners, team1, team2) {
 
   if (!winners.length) return;
 
@@ -223,7 +228,7 @@ function showWinnerPopup(winners, team1, team2) {
     `;
   });
 
-  
+  await confettiReady;
 
   popup.classList.remove('hidden');
 
