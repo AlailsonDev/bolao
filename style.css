@@ -424,3 +424,16 @@ body {
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 470px) {
+  .match-card {
+    flex-direction: row;
+    gap:5px
+  }
+
+  .flag {
+    width: 4.5em;
+    height: 4em;
+    
+  }
+}
