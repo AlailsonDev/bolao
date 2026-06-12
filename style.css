@@ -413,7 +413,7 @@ body {
   }
 
   .match-card {
-    /* flex-direction: column; */
+    flex-direction: column;
   }
 
   .score {
