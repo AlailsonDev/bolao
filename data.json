@@ -5,12 +5,12 @@
       "flag": "br"
     },
     "team2": {
-      "name": "Marrocos",
-      "flag": "ma"
+      "name": "Haiti",
+      "flag": "ht"
     },
     "official_score": {
       "team1": "-",
-      "team2": "-"
+      "team2": "-"  
     }
   },
   "predictions": [
@@ -18,72 +18,72 @@
       "name": "Alailson",
       "photo": "img/alailson.jpeg",
       "score": {
-        "team1": "3",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Alysson",
       "photo": "img/alysson.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Ana Bia",
       "photo": "img/ana bia.jpeg",
       "score": {
-        "team1": "3",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Ana Paula",
       "photo": "img/ana paula.jpeg",
       "score": {
-        "team1": "0",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Anderson",
       "photo": "img/anderson.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Andrea",
       "photo": "img/andrea.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Artur",
       "photo": "img/artur.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Bia",
       "photo": "img/bia.jpeg",
       "score": {
-        "team1": "3",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Carlos",
       "photo": "img/carlos.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
@@ -98,96 +98,96 @@
       "name": "Cezar",
       "photo": "img/cezar.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Chico",
       "photo": "img/chico.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "2"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Cleto",
       "photo": "img/cleto.jpeg",
       "score": {
-        "team1": "4",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Dora",
       "photo": "img/dora.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Emyli",
       "photo": "img/emyli.jpeg",
       "score": {
-        "team1": "3",
-        "team2": "2"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Ewerton",
       "photo": "img/ewerton.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Gabriela",
       "photo": "img/gabriela.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Geraldo",
       "photo": "img/geraldo.jpeg",
       "score": {
-        "team1": "3",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Iasmim",
       "photo": "img/iasmim.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Jessika",
       "photo": "img/jessika.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Joao",
       "photo": "img/joao.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "2"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Karina",
       "photo": "img/karina.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     
@@ -195,64 +195,64 @@
       "name": "Lorena",
       "photo": "img/lorena.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Mailton",
       "photo": "img/mailton.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Millena",
       "photo": "img/millena.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Patricia",
       "photo": "img/patrica.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Pricylla",
       "photo": "img/pricylla.jpeg",
       "score": {
-        "team1": "1",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Rafael",
       "photo": "img/rafael.jpeg",
       "score": {
-        "team1": "2",
-        "team2": "0"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Val",
       "photo": "img/val.jpeg",
       "score": {
-        "team1": "3",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     },
     {
       "name": "Vivi",
       "photo": "img/vivi.jpeg",
       "score": {
-        "team1": "3",
-        "team2": "1"
+        "team1": "-",
+        "team2": "-"
       }
     }
   ]
