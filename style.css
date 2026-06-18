@@ -231,7 +231,7 @@ body {
 }
 
 .popup-overlay {
-  position: fixed;
+   position: fixed;
   inset: 0;
 
   background: rgba(0,0,0,0.72);
@@ -241,6 +241,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 20px;
+
+  overflow-y: auto;
 
   z-index: 9999;
 
@@ -268,11 +272,21 @@ body {
 
 .popup-content {
   position: relative;
-  width: min(900px, 92%);
+
+  width: min(900px, 100%);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
   background: linear-gradient(135deg, #111827, #1e293b);
+
   border: 2px solid rgba(250,204,21,0.3);
+
   border-radius: 28px;
-  padding: 40px;
+
+  padding: 60px 20px 30px;
+
   box-shadow:
     0 0 60px rgba(250,204,21,0.2),
     0 20px 60px rgba(0,0,0,0.5);
@@ -289,17 +303,33 @@ body {
 }
 
 .close-popup {
-  position: absolute;
-  top: 18px;
-  right: 18px;
+  position: sticky;
+
+  top: 0;
+
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 42px;
   height: 42px;
+
   border: none;
+
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.12);
+
   color: white;
+
   cursor: pointer;
+
   font-size: 1rem;
+
+  z-index: 5;
+
   transition: 0.2s;
 }
 
@@ -309,10 +339,14 @@ body {
 }
 
 .winner-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
+ display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+
+  width: 100%;
 }
 
 .popup-winner-card {
@@ -436,4 +470,54 @@ body {
     height: 4em;
     
   }
+}
+
+@media (max-width: 768px) {
+
+  .popup-content {
+
+    padding:
+      70px 16px 24px;
+
+    border-radius: 22px;
+  }
+
+  .popup-title {
+
+    font-size: 1.5rem;
+
+    margin-bottom: 24px;
+  }
+
+  .popup-winner-card {
+
+    width: 100%;
+
+    padding: 18px;
+  }
+
+  .popup-score {
+
+    font-size: 1.5rem;
+
+    gap: 10px;
+  }
+
+  .popup-score .mini-flag {
+
+    width: 38px;
+    height: 28px;
+  }
+
+  .popup-winner-card img {
+
+    width: 72px;
+    height: 72px;
+  }
+
+  .popup-winner-name {
+
+    font-size: 1.1rem;
+  }
+
 }
