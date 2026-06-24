@@ -240,15 +240,15 @@
       "name": "Val",
       "photo": "img/val.jpeg",
       "score": {
-        "team1": "-",
-        "team2": "-"
+        "team1": "2",
+        "team2": "1"
       }
     },
     {
       "name": "Vivi",
       "photo": "img/vivi.jpeg",
       "score": {
-        "team1": "4",
+        "team1": "2",
         "team2": "1"
       }
     }
